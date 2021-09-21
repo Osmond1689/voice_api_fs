@@ -1,12 +1,12 @@
 # voice_api_fs
 just-study<br>
 ### fs接口规划
-	* 呼叫接口
-		* 点击拨号
-			* crmuuid
-			* extensin_number
-			* customer_number
-			* product_code
+	呼叫接口
+		点击拨号
+			crmuuid
+			extensin_number
+			customer_number
+			product_code
 			//call_type
 		群呼拨号
 			队列
