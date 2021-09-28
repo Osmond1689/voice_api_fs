@@ -116,7 +116,64 @@ just-study<br>
 	修改dsn开启自动创建表
 	
 ## 4.动态管理用户
-	
+	ext.xml{
+	<document type="freeswitch/xml">
+	  <section name="directory">
+	  <!--domain name-->
+		<domain name="{{ext.domain}}">
+		  <params>
+			<param name="dial-string" value="{^^:sip_invite_domain=${dialed_domain}:presence_id=${dialed_user}@${dialed_domain}}${sofia_contact(*/${dialed_user}@${dialed_domain})},${verto_contact(${dialed_user}@${dialed_domain})}"/>
+		  </params>
+		  <groups>
+			<group name="{{ext.group}}">
+			  <users>
+			  <!-- user-id -->
+				<user id="{{ext.extnumber}}">
+				  <params>
+				  <!-- password -->
+					<param name="password" value="{{ext.password}}"/>
+					<param name="vm-password" value="{{ext.password}}"/>
+					</params>
+				  <variables>
+					<variable name="toll_allow" value="domestic,international,local"/>
+					<!-- user -->
+					<variable name="accountcode" value="{{ext.extnumber}}"/>
+					<variable name="user_context" value="default"/>
+					<!-- caller_id_name -->
+					<variable name="effective_caller_id_name" value="{{ext.extnumber}}"/>
+					<!-- user -->
+					<variable name="effective_caller_id_number" value="{{ext.extnumber}}"/>
+					<variable name="outbound_caller_id_name" value="$${outbound_caller_name}"/>
+					<variable name="outbound_caller_id_number" value="$${outbound_caller_id}"/>
+					<!-- 呼叫组 -->
+					<variable name="callgroup" value="{{ext.callgroup}}"/>
+					<!-- 重写contact ip和端口 -->
+					<variable name="sip-force-contact" value="NDLB-connectile-dysfunction"/>
+					<variable name="x-powered-by" value="http://www.freeswitch.org.cn"/>
+				  </variables>
+				</user>
+			  </users>
+			</group>
+		  </groups>
+		</domain>
+	  </section>
+	</document>
+	}
+	修改xml_curl模块配置文件
+	新增字段
+	<binding name="directory">
+      <param name="gateway-url" value="http://localhost/~seven/freeswitch/directory.php" bindings="directory"/>
+    </binding>
+	代码主要字段
+	ext={
+        'domain':domain,
+        'group':'default',
+        'extnumber':sip_auth_username,
+        'password':'123456',
+        'callgroup':'default'
+    }
+	保活改用option，降低注册服务器压力
+	修改internal option参数 修改udp-only	
 ## 5.话单
 	mod_cdr_csv 转换为逗号分隔的形式
 	mod_cdr_pg_csv 直接存入数据库 写入失败会存入文件
