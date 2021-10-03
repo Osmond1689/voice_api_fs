@@ -3,13 +3,14 @@
   <!--domain name-->
     <domain name="{{ext.domain}}">
       <params>
-        <param name="dial-string" value="{^^:sip_invite_domain=${dialed_domain}:presence_id=${dialed_user}@${dialed_domain}}${sofia_contact(*/${dialed_user}@${dialed_domain})},${verto_contact(${dialed_user}@${dialed_domain})}"/>
+        <!-- <param name="dial-string" value="{presence_id=${dialed_user}@${dialed_domain}}${sofia_contact(${dialed_user}@${dialed_domain})}"/> -->
+        <param name="dial-string" value="${sofia_contact(${dialed_user}@${dialed_domain})}"/>
       </params>
       <groups>
         <group name="{{ext.group}}">
           <users>
-          <!-- user-id -->
-            <user id="{{ext.extnumber}}">
+          <!-- user-id cacheable fs进行缓存 单位毫秒-->
+            <user id="{{ext.extnumber}}" cacheable="180000">
               <params>
               <!-- password -->
                 <param name="password" value="{{ext.password}}"/>
