@@ -35,6 +35,7 @@ class AES_ENCRYPT(object):
 
 if __name__=='__main__':
     a=AES_ENCRYPT()
-    c=a.encrypt('5001')
-    b=a.decrypt('XywCGB+0T3qSrh5Lz5+yTQ==')
-    print(c.decode('UTF-8'))
+    c=a.encrypt('9575463523')
+    b=a.decrypt('3zToCLIymjhSV4REQ0dUVQ==')
+    d=a.decrypt('bqUMNIuLBoJ7EIt6sBxpgA==')
+    print(b.decode('UTF-8'))

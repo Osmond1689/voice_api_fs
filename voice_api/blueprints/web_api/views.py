@@ -51,7 +51,7 @@ def click_on_call():
                 return_data['msg']='Voice abnormal, Please contact the Voice engineer'
                 return return_data,500
             else:
-                current_app.logger.info("接口调用成功:crm_uuid：%s，extensin_number：%s，product_code：%s",crm_uuid,extensin_number,product_code)
+                current_app.logger.info("接口调用成功:crm_uuid：%s，extensin_number：%s，customer_number： %s，product_code：%s",crm_uuid,extensin_number,customer_number,product_code)
                 return_data['msg']='Call OK'
                 return return_data,200
             #new_send_commands=Send_commands(crm_uuid,extensin_number,customer_number,product_code)

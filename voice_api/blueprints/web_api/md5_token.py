@@ -11,8 +11,8 @@ def encrypt_md5(old_str):
     old_time_stamp = str(time.mktime(utc_old_now_time_array))
     
     #print(time_stamp,old_time_stamp)
-    new_str=old_str+time_stamp
-    new_str_old=old_str+old_time_stamp
+    new_str=old_str+time_stamp[0:10]
+    new_str_old=old_str+old_time_stamp[0:10]
     h1=hashlib.md5()
     h2=hashlib.md5()
     h1.update(new_str.encode(encoding='utf-8'))
