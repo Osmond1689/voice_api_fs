@@ -26,7 +26,6 @@ def auth_ext():
             'callgroup':'default'
         }
         if ext['extnumber'] in ['1000','1001']:
-        # if 1:
             response=make_response(render_template('404.xml'))
             response.headers['Content-Type'] = 'application/xml'
             return response

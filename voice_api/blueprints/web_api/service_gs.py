@@ -11,6 +11,7 @@ class Send_commands():
     def send_call(self):
         cmd='bgapi originate {{crm_uuid={},product_code={},call_type=click-on-call,leg_type=a}}user/{}@{} {} XML default'
         new_cmd=cmd.format(self.crm_uuid,self.product_code,self.extensin_number,self.domain,self.customer_number)
+        #print(new_cmd)
         host='172.17.0.1'
         port=8021
         password='ClueCon'
