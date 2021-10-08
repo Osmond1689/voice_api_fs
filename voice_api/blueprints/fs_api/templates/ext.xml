@@ -10,7 +10,7 @@
         <group name="{{ext.group}}">
           <users>
           <!-- user-id cacheable fs进行缓存 单位毫秒-->
-            <user id="{{ext.extnumber}}" cacheable="180000">
+            <user id="{{ext.extnumber}}" cacheable="1800000">
               <params>
               <!-- password -->
                 <param name="password" value="{{ext.password}}"/>
