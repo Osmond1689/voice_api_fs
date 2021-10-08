@@ -1,0 +1,18 @@
+[2021-10-06 04:39:46,723][views.py:53][INFO][140452828165888] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 05:39:38,522][views.py:54][INFO][140692352206592] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 05:48:51,450][views.py:54][INFO][140692759443200] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 06:01:53,700][views.py:54][INFO][140692343289600] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 06:05:15,311][views.py:54][INFO][140692759443200] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 06:15:54,159][views.py:54][INFO][140166509352704] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 06:17:26,516][views.py:54][INFO][140166239368960] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 06:27:30,299][views.py:54][INFO][140166230714112] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 06:42:19,851][views.py:54][INFO][140166509352704] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 06:45:45,738][views.py:54][INFO][140166230714112] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 07:18:16,680][views.py:54][INFO][140166239368960] - 接口调用成功:crm_uuid：123，extensin_number：1001，product_code：C68
+[2021-10-06 09:35:47,005][views.py:54][INFO][140101019494144] - 接口调用成功:crm_uuid：tm-C68-2--15-0-C68Admin-85212，extensin_number：85212，customer_number： 9575463523，product_code：C68
+[2021-10-07 05:53:42,104][views.py:54][INFO][140638400833280] - 接口调用成功:crm_uuid：tm-C68-1287--17-0-C68Admin-1001，extensin_number：1001，customer_number： 5001，product_code：C68
+[2021-10-07 05:56:35,388][views.py:54][INFO][140637993600768] - 接口调用成功:crm_uuid：tm-C68-1287--18-0-C68Admin-1001，extensin_number：1001，customer_number： 5001，product_code：C68
+[2021-10-07 06:07:16,581][views.py:54][INFO][140638400833280] - 接口调用成功:crm_uuid：tm-C68-1287--19-0-C68Admin-1001，extensin_number：1001，customer_number： 5001，product_code：C68
+[2021-10-07 06:23:42,336][views.py:54][INFO][140637993600768] - 接口调用成功:crm_uuid：tm-C68-1287--20-0-C68Admin-1001，extensin_number：1001，customer_number： 5001，product_code：C68
+[2021-10-07 06:55:33,990][views.py:54][INFO][140638400833280] - 接口调用成功:crm_uuid：tm-C68-1287--21-0-C68Admin-1001，extensin_number：1001，customer_number： 5001，product_code：C68
+[2021-10-07 07:13:42,786][views.py:54][INFO][140638400833280] - 接口调用成功:crm_uuid：tm-C68-1287--22-0-C68Admin-1001，extensin_number：1001，customer_number： 5001，product_code：C68

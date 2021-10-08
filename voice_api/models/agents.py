@@ -1,4 +1,5 @@
 from . import db
+from contextlib import contextmanager
 '''
        Column        |          Type           | Collation | Nullable | Default 
 ----------------------+-------------------------+-----------+----------+---------
@@ -48,3 +49,12 @@ class Agents(db.Model):
     talk_time            =db.Column(db.Integer,nullable=False,default=0)
     ready_time           =db.Column(db.Integer,nullable=False,default=0)
     external_calls_count =db.Column(db.Integer,nullable=False,default=0)
+
+    @contextmanager
+    def auto_commit(self):
+        try:
+            yield
+            self.session.commit()  # 事务
+        except Exception as e:
+            self.session.rollback()  # 回滚
+            raise e

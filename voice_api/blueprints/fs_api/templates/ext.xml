@@ -22,7 +22,7 @@
                 <variable name="accountcode" value="{{ext.extnumber}}"/>
                 <variable name="user_context" value="default"/>
                 <!-- caller_id_name -->
-                <variable name="effective_caller_id_name" value="{{ext.extnumber}}"/>
+                <variable name="effective_caller_id_name" value="{{ext.extname}}"/>
                 <!-- user -->
                 <variable name="effective_caller_id_number" value="{{ext.extnumber}}"/>
                 <variable name="outbound_caller_id_name" value="$${outbound_caller_name}"/>

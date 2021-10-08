@@ -2,7 +2,6 @@ from flask import Flask
 from voice_api.blueprints.fs_api.views import fs_api
 from voice_api.blueprints.web_api.views import web_api
 from voice_api.models import db
-from voice_api.models.ext_info import Ext_info
 import logging
 from logging.handlers import TimedRotatingFileHandler
 

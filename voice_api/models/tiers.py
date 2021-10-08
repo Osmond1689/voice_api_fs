@@ -1,4 +1,5 @@
 from . import db
+from contextlib import contextmanager
 '''
  queue    | character varying(255) |           |          | 
  agent    | character varying(255) |           |          | 
@@ -14,4 +15,12 @@ class Tiers(db.Model):
     level    =db.Column(db.Integer,nullable=False,default=1)
     position =db.Column(db.Integer,nullable=False,default=1)
 
+    @contextmanager
+    def auto_commit(self):
+        try:
+            yield
+            self.session.commit()  # 事务
+        except Exception as e:
+            self.session.rollback()  # 回滚
+            raise e
     
